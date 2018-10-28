@@ -12,7 +12,7 @@ Parameters:
   CodedeployBucketName:
     Type: String
     Description: Code deploy bucket name    # optional, string, description of parameter value
-    Default: "RtdBackendInfraCodeDeployBucket"
+    Default: "rtd_backend_infra_codedeploy_bucket"
   ApplicationName:
     Type: String
     Description: Application Name
