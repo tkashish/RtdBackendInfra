@@ -1,0 +1,19 @@
+---
+AWSTemplateFormatVersion: "2010-09-09"
+
+Parameters:
+  NetworkStackName:
+    Type: String
+    Description: Name of the vpc infrastructure stack    # optional, string, description of parameter value
+    Default: RtdVpcInfra    # optional
+    AllowedPattern: "^[a-zA-Z][-a-zA-Z0-9]*$"    # optional, regular expression enforced on string values
+    MaxLength: 255      # optional, max length for string values
+    MinLength: 1      # optional, smallest number of characters allowed for string parameter types
+  CodedeployBucketName:
+    Type: String
+    Description: Code deploy bucket name    # optional, string, description of parameter value
+    Default: "RtdBackendInfraCodeDeployBucket"
+  ApplicationName:
+    Type: String
+    Description: Application Name
+    Default: RtdBackendInfra

@@ -1,0 +1,20 @@
+---
+AWSTemplateFormatVersion: "2010-09-09"
+
+Resources:
+  CodeDeployBucket:
+    Type: AWS::S3::Bucket
+    Properties:
+      AccessControl: Private     # optional
+      BucketName:
+        Ref: CodedeployBucketName     # optional
+      VersioningConfiguration:
+        Status: Enabled     # optional
+Outputs:
+  CodeDeployBucketName:      #
+    Description: Code deploy bucket name  # optional, string describing the output
+    Value:
+      Ref: CodeDeployBucket    # required, value of the output
+    Export:
+      Name:
+        Fn::Sub: "${ApplicationName}-CodeDeployBucketName"    # optional, name used for cross-stack reference
