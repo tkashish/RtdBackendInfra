@@ -38,18 +38,6 @@ Resources:
       - LoadBalancer
     Type: AWS::CodeDeploy::DeploymentGroup
     Properties:
-      Deployment:
-        Description: "A sample deployment"
-        IgnoreApplicationStopFailures: true
-        Revision:
-          RevisionType: S3
-          S3Location:
-            Bucket:
-              Ref: CodedeployBucketName
-            Key:
-              Ref: ApplicationName
-            BundleType:
-              Ref: BundleType
       ApplicationName:
         Ref: CodeDeployApplication     # required
       LoadBalancerInfo:
