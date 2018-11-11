@@ -17,3 +17,7 @@ Parameters:
     Type: String
     Description: Application Name
     Default: RtdBackendInfra
+  DeploymentType:
+    Type: String
+    Description: Deployment Type
+    Default: BLUE_GREEN
