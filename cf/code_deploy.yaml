@@ -40,12 +40,12 @@ Resources:
     Properties:
       ApplicationName:
         Ref: CodeDeployApplication     # required
-      LoadBalancerInfo:
-        ElbInfoList:
-          - Name:
-              Ref: LoadBalancer
-      AutoScalingGroups:                # optional, list of String
-        - Ref: BlueGreenAutoScalingGroup
+      # LoadBalancerInfo:
+      #   ElbInfoList:
+      #     - Name:
+      #         Ref: LoadBalancer
+      # AutoScalingGroups:                # optional, list of String
+      #   - Ref: BlueGreenAutoScalingGroup
       DeploymentConfigName: CodeDeployDefault.OneAtATime     # optional
       DeploymentGroupName:
         Fn::Sub: "${ApplicationName}-DeploymentGroup"    # optional
