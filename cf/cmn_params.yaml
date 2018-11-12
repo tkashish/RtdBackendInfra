@@ -21,3 +21,10 @@ Parameters:
     Type: String
     Description: Deployment Type
     Default: BLUE_GREEN
+
+Outputs:
+  ApplicationName:
+    Description: Name of codedeploy application name
+    Value:
+      Ref: ApplicationName
+  

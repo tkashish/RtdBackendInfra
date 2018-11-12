@@ -53,3 +53,13 @@ Resources:
         Fn::GetAtt: CodeDeployServiceRole.Arn
       DeploymentStyle:
         DeploymentOption: WITH_TRAFFIC_CONTROL
+
+Outputs:
+  CurrentDeploymentGroupName:
+    Description: current deployment group name
+    Value:
+      Ref: CodeDeployDeploymentGroup
+  ServiceRoleArn:
+    Description: code deploy service role arn
+    Value:
+      Fn::GetAtt: CodeDeployServiceRole.Arn

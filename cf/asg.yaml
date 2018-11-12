@@ -102,7 +102,7 @@ Resources:
         - Fn::ImportValue: {'Fn::Sub': '${NetworkStackName}-PublicSubnetId'}
 
 Outputs:
-  BlueGreenAutoScalingGroupId:      #
+  AutoScalingGroup:      #
     Description: Auto scaling group id  # optional, string describing the output
     Value:
       Ref: BlueGreenAutoScalingGroup    # required, value of the output

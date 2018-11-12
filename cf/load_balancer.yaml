@@ -22,7 +22,7 @@ Resources:
       SecurityGroups:
         - Ref: SecurityGroup
 Outputs:
-  LoadBalancerId:      #
+  LoadBalancer:      #
     Description: Id of the load balancer  # optional, string describing the output
     Value:
       Ref: LoadBalancer   # required, value of the output
